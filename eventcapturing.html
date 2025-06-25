@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Capturing vs Bubbling</title>
+  <style>
+    div, section, button {
+      padding: 20px;
+      border: 1px solid black;
+      display: block;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="div">
+  DIV
+  <section id="section">
+    SECTION
+    <button id="button">BUTTON</button>
+  </section>
+</div>
+
+<script>
+  document.getElementById("div").addEventListener("click", () => {
+    console.log("DIV clicked - bubbling");
+  });
+
+  document.getElementById("section").addEventListener("click", () => {
+    console.log("SECTION clicked - bubbling");
+  });
+
+  document.getElementById("button").addEventListener("click", () => {
+    console.log("BUTTON clicked - bubbling");
+  });
+  document.getElementById("div").addEventListener("click", () => {
+    console.log("DIV clicked - capturing");
+  }, true);
+
+  document.getElementById("section").addEventListener("click", () => {
+    console.log("SECTION clicked - capturing");
+  }, true);
+document.getElementById("button").addEventListener("click", () => {
+    console.log("BUTTON clicked - capturing");
+  }, true);
+</script>
+
+
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Capturing vs Bubbling</title>
+  <style>
+    div, section, button {
+      padding: 20px;
+      border: 1px solid black;
+      display: block;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="div">
+  DIV
+  <section id="section">
+    SECTION
+    <button id="button">BUTTON</button>
+  </section>
+</div>
+
+<script>
+  document.getElementById("div").addEventListener("click", () => {
+    console.log("DIV clicked - bubbling");
+  });
+
+  document.getElementById("section").addEventListener("click", () => {
+    console.log("SECTION clicked - bubbling");
+  });
+
+  document.getElementById("button").addEventListener("click", () => {
+    console.log("BUTTON clicked - bubbling");
+  });
+  document.getElementById("div").addEventListener("click", () => {
+    console.log("DIV clicked - capturing");
+  }, true);
+
+  
+
+document.getElementById("section").addEventListener("click", () => {
+    console.log("SECTION clicked - capturing");
+  }, true);
+document.getElementById("button").addEventListener("click", () => {
+    console.log("BUTTON clicked - capturing");
+  }, true);
+</script>
+
+</body>
+</html>
+
