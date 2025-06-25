@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id = "h1">My Web Page</h1>
+
+<p id="demo"></p>
+<p>The length of the string is:</p>
+<p id="length"></p>
+<p>The charAt() method returns the character at a given position in a string:</p>
+<p id =  "char"></p> 
+<p>The at() method returns an indexed element from a string:</p>
+
+<p id="at"></p>
+<h2>The slice() Method</h2>
+
+<p>The sliced (extracted) part of the string is:</p>
+<p id="slice"></p>
+<p>Convert string to upper case:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="upper">Hello World!</p>
+
+<h1>JavaScript String Methods</h1>
+<p>Convert string to lower case:</p>
+
+<button onclick="lowerFunction()">Try it</button>
+
+<p id="lower">Hello World!</p> 
+<h2>The concat() Method</h2>
+
+<p>The concat() method joins two or more strings:</p>
+
+<p id="conc"></p>
+
+
+<h2>The trim() Method</h2>
+
+<p id="trim"></p>
+
+<script>
+    
+document.getElementById("demo").innerHTML = "<h2>Hello World</h2>";
+document.getElementById("h1").innerText = "Hello";
+document.write(5 + 6);
+window.alert(5 + 6);
+console.log(5 + 6);
+var x = 5; // ones a variable declare and initialization after then you can declare and initialization the variable.
+const price1 = 5; //  ones a variable declare and initialization after then you can not declare and initialization the variable.
+
+const price2 = 6;
+let total = price1 + price2    //ones a variable declare and initialization after then you can not declare but  initialization the variable.
+let text_len = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("length").innerHTML = text_len.length;
+var text_char = "HELLO WORLD";
+document.getElementById("char").innerHTML = text_char.charAt(0);
+const name = "W3Schools";
+let letter = name.at(2);
+
+document.getElementById("at").innerHTML = letter;
+
+let text_slice = "Apple, Banana, Kiwi";
+let part = text_slice.slice(7,13);
+document.getElementById("slice").innerHTML = part;
+function myFunction() {
+  let text = document.getElementById("upper").innerHTML;
+  document.getElementById("upper").innerHTML =
+  text.toUpperCase();
+}
+function lowerFunction() {
+  let text = document.getElementById("lower").innerHTML;
+  document.getElementById("lower").innerHTML =
+  text.toLowerCase();
+}
+
+let text_1 = "Hello";
+let text_2 = "World!";
+let text_3 = text_1.concat(" ",text_2);
+document.getElementById("conc").innerHTML = text_3;
+
+let text1 = "     Hello World!     ";
+let text2 = text1.trim();
+
+document.getElementById("demo").innerHTML =
+"Length text1 = " + text1.length + "<br>Length text2 = " + text2.length;
+</script>
+
+</body>
+</html> 
